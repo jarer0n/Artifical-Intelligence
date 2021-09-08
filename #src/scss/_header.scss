@@ -1,0 +1,84 @@
+.header {
+    background: rgba(8, 16, 29, 1);
+    height: 100px;
+    padding: 21px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    // box-shadow: rgba(0, 0, 0, 0.25);
+
+    &_container {
+        display: flex;
+
+    }
+
+    &_logo-link { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    &_logo-link span {
+        font-size: 22.5455px;
+        line-height: 140%;
+        padding: 0 0 0 15px;
+        color: rgba(58, 104, 184, 1);
+        ;
+    }
+
+    &_login {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    &_login-button {
+        background: rgba(58, 104, 184, 1);
+        min-height: 52px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+        color:rgba(255, 255, 255, 1);
+        font-size: 16px;
+        line-height: 137%;
+        transition: all 0.3s linear 0s;
+        
+    }
+    &_login-button:hover{
+        border: 1px solid rgb(246, 239, 239);
+
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    margin: 0 0 0 84px;
+}
+.menu-list {
+    display: flex;
+    
+}
+.menu-list li {
+    margin: 0 0 0 40px;
+}
+.menu-list li:first-child{
+    margin: 0;
+}
+
+.menu-link {
+    color: #FFFFFF;
+    line-height: 137%;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+.menu-link:hover {
+    color: rgba(58, 104, 184, 1);
+}
