@@ -1,3 +1,4 @@
+
 .header {
     background: rgba(8, 16, 29, 1);
     height: 100px;
@@ -9,16 +10,19 @@
     z-index: 100;
     // box-shadow: rgba(0, 0, 0, 0.25);
 
+
     &_container {
         display: flex;
-
     }
 
-    &_logo-link { 
+    &_logo {
+        z-index: 5;
+    }
+
+    &_logo-link {
         display: flex;
         justify-content: center;
         align-items: center;
-    
     }
 
     &_logo-link span {
@@ -33,7 +37,6 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        
     }
 
     &_login-button {
@@ -48,12 +51,14 @@
         font-size: 16px;
         line-height: 137%;
         transition: all 0.3s linear 0s;
-        
+        z-index: 4;
     }
-    &_login-button:hover{
-        border: 1px solid rgb(246, 239, 239);
 
-    }
+    &_login-button:hover{
+    border: 1px solid rgb(246, 239, 239);
+    transform: scale(1.1);
+
+}
 }
 
 .menu {
@@ -61,24 +66,138 @@
     align-items: center;
     flex: 1 1 auto;
     margin: 0 0 0 84px;
-}
-.menu-list {
-    display: flex;
+
+    &_list {
+        display: flex;
+    }
+    &_list li {
+        margin: 0 0 0 40px;
+    }
+    &_list li:first-child{
+        margin: 0;
+    }
     
-}
-.menu-list li {
-    margin: 0 0 0 40px;
-}
-.menu-list li:first-child{
-    margin: 0;
+
+    &_link {
+        color: #FFFFFF;
+        line-height: 137%;
+        font-size: 16px;
+        transition: 0.3s ease-in-out;
+    }
+    &_link:hover {
+        color: rgba(58, 104, 184, 1);
+    }
 }
 
-.menu-link {
-    color: #FFFFFF;
-    line-height: 137%;
-    font-size: 16px;
-    transition: 0.3s ease-in-out;
+@media (max-width: 950px) {
+    .menu {
+        margin: 0 0 0 44px;
+    }
+    .menu_list li{
+        margin: 0 0 0 30px;
+    }
+    .header_login {
+        margin: 0 0 0 5px;
+    }
+
 }
-.menu-link:hover {
-    color: rgba(58, 104, 184, 1);
+
+@media (max-width: 875px) {
+    .menu {
+        margin: 0 0 0 20px;
+    }
+    .menu_list li{
+        margin: 0 0 0 20px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .menu_list {
+        flex-direction: column;
+    }
+    .menu_list li {
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(177, 177, 177, 0.363);
+    }
+    .menu_list a {
+        font-size: 24px;
+    }
+
+    .header_logo-link span{
+        display: none;
+    }
+   
+    .header_login-button {
+        min-height: 45px;
+        padding: 0 18px;
+    }
+    .header_menu {
+        position: relative;
+    }
+    //! BURGER                                           
+    .menu_body {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(2, 10, 24, 0.904);
+        padding: 130px 30px 30px 30px;
+        transition: all 0.4s linear 0s;
+        overflow: auto;
+    }
+    .menu_body.active {
+        top: 0;
+    }
+    .menu_body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: rgba(2, 10, 24, 1);
+    }
+
+    .menu_icon {
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        top: 50%;
+        left: 45%;
+    }
+    .menu_icon::before,
+    .menu_icon::after{
+        content: "";
+        height: 2px; 
+        width: 20px;
+        position: absolute; 
+        top: 50%;
+        right: 0;
+        background: #fff;
+        transition: all 0.3s ease-out 0s;
+    }
+    .menu_icon::before{
+        left: 0;
+        transform: skew(0deg, 30deg);
+    }
+    .menu_icon::after{
+        right: 0;
+        transform: skew(0deg, -30deg);
+    }
+
+    .menu_icon.active::before {
+        left: 0;
+        transform: skew(0deg, -30deg);
+    }
+    .menu_icon.active::after {
+        right: 0;
+        transform: skew(0deg, 30deg);
+    }
+    
 }

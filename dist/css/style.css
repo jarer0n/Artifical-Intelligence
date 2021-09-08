@@ -149,6 +149,10 @@ h6 {
   display: flex;
 }
 
+.header_logo {
+  z-index: 5;
+}
+
 .header_logo-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,10 +204,14 @@ h6 {
   -webkit-transition: all 0.3s linear 0s;
   -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
+  z-index: 4;
 }
 
 .header_login-button:hover {
   border: 1px solid #f6efef;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .menu {
@@ -219,21 +227,21 @@ h6 {
   margin: 0 0 0 84px;
 }
 
-.menu-list {
+.menu_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.menu-list li {
+.menu_list li {
   margin: 0 0 0 40px;
 }
 
-.menu-list li:first-child {
+.menu_list li:first-child {
   margin: 0;
 }
 
-.menu-link {
+.menu_link {
   color: #FFFFFF;
   line-height: 137%;
   font-size: 16px;
@@ -242,7 +250,7 @@ h6 {
   transition: 0.3s ease-in-out;
 }
 
-.menu-link:hover {
+.menu_link:hover {
   color: #3a68b8;
 }
 
@@ -273,6 +281,10 @@ body {
   font-weight: 600;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -296,6 +308,167 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
+
+@media (max-width: 950px) {
+  .menu {
+    margin: 0 0 0 44px;
+  }
+
+  .menu_list li {
+    margin: 0 0 0 30px;
+  }
+
+  .header_login {
+    margin: 0 0 0 5px;
+  }
+}
+
+@media (max-width: 875px) {
+  .menu {
+    margin: 0 0 0 20px;
+  }
+
+  .menu_list li {
+    margin: 0 0 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .menu_list li {
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(177, 177, 177, 0.363);
+  }
+
+  .menu_list a {
+    font-size: 24px;
+  }
+
+  .header_logo-link span {
+    display: none;
+  }
+
+  .header_login-button {
+    min-height: 45px;
+    padding: 0 18px;
+  }
+
+  .header_menu {
+    position: relative;
+  }
+
+  .menu_body {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 10, 24, 0.904);
+    padding: 130px 30px 30px 30px;
+    -webkit-transition: all 0.4s linear 0s;
+    -o-transition: all 0.4s linear 0s;
+    transition: all 0.4s linear 0s;
+    overflow: auto;
+  }
+
+  .menu_body.active {
+    top: 0;
+  }
+
+  .menu_body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #020a18;
+  }
+
+  .menu_icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    top: 50%;
+    left: 45%;
+  }
+
+  .menu_icon::before,
+  .menu_icon::after {
+    content: "";
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: #fff;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+
+  .menu_icon::before {
+    left: 0;
+    -webkit-transform: skew(0deg, 30deg);
+        -ms-transform: skew(0deg, 30deg);
+            transform: skew(0deg, 30deg);
+  }
+
+  .menu_icon::after {
+    right: 0;
+    -webkit-transform: skew(0deg, -30deg);
+        -ms-transform: skew(0deg, -30deg);
+            transform: skew(0deg, -30deg);
+  }
+
+  .menu_icon.active::before {
+    left: 0;
+    -webkit-transform: skew(0deg, -30deg);
+        -ms-transform: skew(0deg, -30deg);
+            transform: skew(0deg, -30deg);
+  }
+
+  .menu_icon.active::after {
+    right: 0;
+    -webkit-transform: skew(0deg, 30deg);
+        -ms-transform: skew(0deg, 30deg);
+            transform: skew(0deg, 30deg);
+  }
+}
 @supports (-webkit-appearance:none){
+
+}
+
+ @media (max-width: 950px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 875px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 767px){
+
+@supports (-webkit-appearance:none){
+
+}
 
 }

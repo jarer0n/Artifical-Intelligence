@@ -18,6 +18,11 @@ body{
     font-family: "OpenSans";
     font-weight: 600;
 }
+
+body.lock{
+    overflow: hidden;
+}
+
 .wrapper {
     min-height: 100%;
     overflow: hidden;
