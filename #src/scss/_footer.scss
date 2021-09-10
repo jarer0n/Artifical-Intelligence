@@ -1,6 +1,6 @@
 .footer {
     background: rgba(2, 10, 24, 1);
-    height: 508px;
+    min-height: 508px;
     font-family: "CircularStd";
     font-weight: 400;
 
@@ -24,10 +24,10 @@
         flex: 1 1 31.4%;
         margin: 0 0 0 30px;
         
+        
     }
 
     &_block-3 {
-
         flex: 1 1 31.4%;
         margin: 0 0 0 30px;
      }
@@ -65,6 +65,8 @@
     &_block-contacts {
         a {
             color: white;
+            display: inline-flex;
+            align-items: center;
             transition: all 0.3s ease 0s;
             picture {
                 margin-right: 10px;
@@ -74,19 +76,25 @@
         a:hover{
             color: rgba(58, 64, 75, 1);
         }
+        a:hover .contacts_icon{
+            color: #3A68B8;
+            transform: scale(1.2);
+        }
         li {
             margin: 0 0 20px 0;
         }
     }
 
     &_block-title {
+        display: block;
         font-size: 16px;
         font-weight: 500;
         color: #ffff;
-        margin-bottom: 32px;
+        margin: 25px 0 32px 0;
     }
 
     &_block-list {
+        margin: 32px 0 0 0;
         li {
             padding: 0 0 20px 0;
         }
@@ -119,25 +127,109 @@
 
     &_block-icons {
         display: flex;
-        picture {
-            margin-left: 25px;
-        }
-        picture:first-child {
-            margin: 0;
-        }
-        .picture:hover{
-        }
+    }
+    &_block-socials{
+        display: inline-block;
+        align-items: center;
+        margin: 0 18px 0 0;
     }
    
 }
 
-.svg-call-dims { width: 15px; height: 15px; }
-	.svg-fb-dims { width: 17px; height: 17px; }
-	.svg-in-dims { width: 17px; height: 16px; }
-	.svg-inst-dims { width: 17px; height: 17px; }
-	.svg-loc-dims { width: 15px; height: 18px; }
-	.svg-msg-dims { width: 15px; height: 12px; }
-	.svg-twitter-dims { width: 21px; height: 17px; }
-	.svg-youtube-dims { width: 20px; height: 15px; }
-    
-    
+.contacts_icon{
+    width: 18px;
+    height: 15px;
+    color: white;
+    margin: 0 10px 0 0;
+    transition: all 0.3s ease 0s;
+}
+.icon_phone {
+    transform: rotate(-45deg);
+}
+
+.info_icon{
+    width: 20px;
+    height: 15px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+.info_icon:hover{
+        color: #3A68B8;
+            transform: scale(1.2);
+}
+
+.footer_input{
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+}
+
+@media (max-width: 875px) {
+    .footer_body{
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 0 20px 0;
+        overflow: auto;
+    }
+    .info_block{
+        margin: 0;
+        min-width: 180px;
+    }
+   .info_block-logo{
+       display: none;
+   }
+   .info_block-logotitle{
+       font-size: 24px;
+   }
+   .info_block-list{
+       display: none;
+   }
+   .info_block-link{
+       font-size: 16px;
+   }
+   .info_block-icons{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+   .info_icon{
+       width: 30px;
+       height: 25px;
+   }
+   
+   .info_block-text{
+       margin-bottom: 15px;
+   }
+   .spoller_title{
+       position: relative;
+       font-size: 18px;
+   }
+   .info_block-title{
+       margin-top: 10px;
+   }
+   .spoller_title::after{
+       content: "";
+       position: absolute;
+       top: 50%;
+       right: 15px;
+       transform: translateY(-50%);
+       display: block;
+        border-style: solid;
+        border-width: 10px 8px 0 8px;
+        border-color: #3A68B8 transparent transparent transparent;
+        transition: all 0.3s ease-out 0s;
+   }
+
+   .footer_input:checked ~.info_block-list{
+       display: block;
+   }
+   .footer_input:checked ~ .spoller_title{
+       color:#3a68bb;
+   }
+   .footer_input:checked ~ .spoller_title::after{
+        border-style: solid;
+        border-width: 0 8px 10px 8px;
+        border-color: transparent transparent #3a68bb transparent;
+   }
+}
