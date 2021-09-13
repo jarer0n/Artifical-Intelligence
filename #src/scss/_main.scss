@@ -94,13 +94,22 @@
         display: flex;
         flex-wrap: wrap;
         padding: 0 0 108px 0;
+        
         a{
             padding: 0 70px 0 0;
         }
         a:last-child{
             padding: 0;
         }
+        img{
+            transition: all 1s ease-out 0s;
+        }
+        img:hover{
+            filter: hue-rotate(360deg);
+            transform: scale(1.1);
+        }
     }
+
 }
 @media(max-width: 767px) {
     .main_row{
@@ -140,3 +149,92 @@
         }
     }
 }
+
+//! LEARN...........................//
+.learn {
+    background-color: 
+    rgba(2, 10, 24, 1);
+
+    &_body {
+    }
+
+    &_row {
+        display: flex;
+        padding: 121px 0 170px 0;
+        justify-content: space-between;
+    }
+
+    &_logo {
+        max-width: 669px;
+        margin: 0 0 0 -150px;
+    }
+
+    &_info {
+        max-width: 488px;
+        align-self: center;
+    }
+    &_info-title{
+        margin: 0 0 30px 0;
+    }
+    &_info-text{
+        margin: 0 0 50px 0;
+    }
+
+    &_info-button {
+        display: inline-flex;
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(58, 104, 184, 1);
+            border-radius: 5px;
+            margin: 0 20px 0 0;
+            padding: 0 30px;
+            min-height: 57px;
+            color: #fff;
+            line-height: 135%;
+            font-size: 20px;
+            font-weight: 600;
+            transition: all 0.4s  ease-out 0s;
+        }
+        :hover{
+            background: rgba(0,0,0,0);
+            color: #3a7999;
+            box-shadow: inset 0 0 0 3px #3a7999;
+            transition: all 0.4s  ease-out 0s;
+        }
+    }
+}
+
+.subtitle {
+    font-size: 40px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #ffffff;
+    
+}
+.text {
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 600;
+    color: rgba(126, 130, 136, 1);
+    
+}
+@media(max-width: 767px) {
+    .learn_row{
+        flex-direction: column;
+        padding: 30px 0 15px 0;
+    }
+    .learn_logo{
+        margin: 0 0 20px 0;
+        img{
+            max-width: 500px;
+        }
+    }
+    .learn_info-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+

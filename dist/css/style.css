@@ -396,6 +396,107 @@ h6 {
   padding: 0;
 }
 
+.main_links img {
+  -webkit-transition: all 1s ease-out 0s;
+  -o-transition: all 1s ease-out 0s;
+  transition: all 1s ease-out 0s;
+}
+
+.main_links img:hover {
+  -webkit-filter: hue-rotate(360deg);
+          filter: hue-rotate(360deg);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.learn {
+  background-color: #020a18;
+}
+
+.learn_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 121px 0 170px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.learn_logo {
+  max-width: 669px;
+  margin: 0 0 0 -150px;
+}
+
+.learn_info {
+  max-width: 488px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.learn_info-title {
+  margin: 0 0 30px 0;
+}
+
+.learn_info-text {
+  margin: 0 0 50px 0;
+}
+
+.learn_info-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.learn_info-button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #3a68b8;
+  border-radius: 5px;
+  margin: 0 20px 0 0;
+  padding: 0 30px;
+  min-height: 57px;
+  color: #fff;
+  line-height: 135%;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+
+.learn_info-button :hover {
+  background: rgba(0, 0, 0, 0);
+  color: #3a7999;
+  -webkit-box-shadow: inset 0 0 0 3px #3a7999;
+          box-shadow: inset 0 0 0 3px #3a7999;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+
+.subtitle {
+  font-size: 40px;
+  line-height: 130%;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 600;
+  color: #7e8288;
+}
+
 .footer {
   background: #020a18;
   min-height: 508px;
@@ -924,6 +1025,35 @@ body.lock {
 
   .main_links img {
     max-width: 180px;
+  }
+
+  .learn_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 0 15px 0;
+  }
+
+  .learn_logo {
+    margin: 0 0 20px 0;
+  }
+
+  .learn_logo img {
+    max-width: 500px;
+  }
+
+  .learn_info-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @supports (-webkit-appearance:none){
