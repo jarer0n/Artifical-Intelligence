@@ -112,6 +112,9 @@
 
 }
 @media(max-width: 767px) {
+    .main{
+        padding: 70px 0 0 0;
+    }
     .main_row{
         flex-direction: column;
     }
@@ -251,10 +254,13 @@
 //!SLIDER ................................//
 .slider_body{
     background-color:rgba(2, 10, 24, 1);
+}
+.slider_body-row{
     max-width: 1920px;
+    margin: 0 auto;
 }
 .swiper {
-    width: 100%;
+    min-width: 100%;
     min-height: 435px;
 }
 .swiper-wrapper {
@@ -274,6 +280,11 @@
             align-items: center;
             padding: 30px 30px 30px 30px;
             border-radius: 8px;
+            max-width: 100%;
+            height: 389px;
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.65);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.65);
+            box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.65);
 		}
 
 		&_logo {
