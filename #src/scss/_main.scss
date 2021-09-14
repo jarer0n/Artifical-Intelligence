@@ -125,7 +125,7 @@
         margin: 0 0 20px 0;
         align-self: flex-start;
         img{
-            width: 400px;
+            max-width: 100%;
         }
     }
     .main_content-buttons{
@@ -220,6 +220,14 @@
     color: rgba(126, 130, 136, 1);
     
 }
+@media (max-width:1024px) {
+    .learn_logo{
+        margin: 0 20px 0 0;
+        img{
+            max-width: 100%;
+        }
+    }
+}
 @media(max-width: 767px) {
     .learn_row{
         flex-direction: column;
@@ -227,8 +235,10 @@
     }
     .learn_logo{
         margin: 0 0 20px 0;
+        align-self: flex-start;
         img{
-            max-width: 500px;
+            max-width: 100%;
+            
         }
     }
     .learn_info-button{
@@ -238,3 +248,133 @@
     }
 }
 
+//!SLIDER ................................//
+.slider_body{
+    background-color:rgba(2, 10, 24, 1);
+    max-width: 1920px;
+}
+.swiper {
+    width: 100%;
+    min-height: 435px;
+}
+.swiper-wrapper {
+
+}
+.swiper-slide {
+}
+.slide {
+
+		&_item {
+            background: -webkit-linear-gradient(225deg, rgb(13, 21, 34), rgb(25, 32, 45) 68%);
+            background: -moz-linear-gradient(225deg, rgb(13, 21, 34), rgb(25, 32, 45) 68%);
+            background: linear-gradient(225deg, rgb(13, 21, 34), rgb(25, 32, 45) 68%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 30px 30px 30px;
+            border-radius: 8px;
+		}
+
+		&_logo {
+            margin-bottom: 30px;
+            min-width: 100px;
+            min-height: 100px;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+		}
+
+		&_title {
+            color: rgba(184, 187, 191, 1);
+            font-size: 25px;
+            line-height: 125%;
+            font-weight: 700;
+            margin-bottom: 30px;
+		}
+
+		&_text {
+            font-size: 16px;
+            line-height: 160%;
+            font-weight: 600;
+            color: rgba(184, 187, 191, 1);
+            text-align: center;
+		}
+}
+.swiper-pagination {
+    bottom: 0;
+}
+.swiper .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    background: rgba(44, 54, 71, 1);
+}
+
+//!!ABOUT.....................................//
+
+.about {
+    background-color:rgba(2, 10, 24, 1);
+    padding: 95px 0 170px 0;
+
+    &_body {
+    }
+
+    &_item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_info {
+        min-width: 550px;
+    }
+
+    &_info-title {
+        padding: 45px 0 0 0;
+        margin: 0 0 40px 0;
+    }
+
+    &_info-text {
+        max-width: 460px;
+        p{
+            margin: 0 0 20px 0;
+        }
+        p:last-child{
+            margin: 0;
+        }
+    }
+
+    &_logo {
+        max-width: 642px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about{
+        padding: 50px 0 50px 0;
+    }
+    .about_info{
+        min-width: 0;
+    }
+    .about_logo {
+        img{
+            max-width: 100%;
+        }
+    }
+}
+@media (max-width:767px) {
+    .about_item{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .about_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about_title{
+        margin: 0;
+    }
+}

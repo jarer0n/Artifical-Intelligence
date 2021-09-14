@@ -33,3 +33,32 @@ if(iconMenu){
 }
 
 //TODO SWIPER.................................///
+const swiper = new Swiper('.swiper',{
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoheight: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints:{
+        
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          900: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1600: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+      },
+});

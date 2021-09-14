@@ -28,6 +28,7 @@ body.lock{
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 .container {
     max-width: 1176px;
