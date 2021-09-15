@@ -16,7 +16,11 @@
 
     &_content-subtitle {
         font-size: 18px;
-        color: #3A68B8;
+        background: -webkit-linear-gradient(45deg, rgb(63, 122, 124), rgb(217, 239, 240));
+        background: -moz-linear-gradient(45deg, rgb(63, 122, 124), rgb(217, 239, 240));
+        background: linear-gradient(45deg, rgb(63, 122, 124), rgb(217, 239, 240));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-weight: 600;
         line-height: 160%;
         text-transform: uppercase;

@@ -171,7 +171,10 @@ h6 {
   font-size: 22.5455px;
   line-height: 140%;
   padding: 0 0 0 15px;
-  color: #3a68b8;
+  background: -o-linear-gradient(45deg, #3f7a7c, #d9eff0);
+  background: linear-gradient(45deg, #3f7a7c, #d9eff0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header_login {
@@ -259,7 +262,7 @@ h6 {
 }
 
 .menu_link:hover {
-  color: #3a68b8;
+  color: #3f7a7c;
 }
 
 .main {
@@ -284,7 +287,10 @@ h6 {
 
 .main_content-subtitle {
   font-size: 18px;
-  color: #3A68B8;
+  background: -o-linear-gradient(45deg, #3f7a7c, #d9eff0);
+  background: linear-gradient(45deg, #3f7a7c, #d9eff0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
   line-height: 160%;
   text-transform: uppercase;
@@ -814,7 +820,10 @@ h6 {
   font-size: 16;
   font-weight: 600;
   line-height: 137%;
-  color: #3A68B8;
+  background: -o-linear-gradient(45deg, #3f7a7c, #d9eff0);
+  background: linear-gradient(45deg, #3f7a7c, #d9eff0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
 }
 
@@ -844,11 +853,11 @@ h6 {
 }
 
 .info_block-contacts a:hover {
-  color: #3a404b;
+  color: #3f7a7c;
 }
 
 .info_block-contacts a:hover .contacts_icon {
-  color: #3A68B8;
+  color: #3f7a7c;
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
@@ -885,7 +894,7 @@ h6 {
 }
 
 .info_block-link:hover {
-  color: #3a404b;
+  color: #3f7a7c;
 }
 
 .info_block-sitelink {
@@ -903,7 +912,7 @@ h6 {
 }
 
 .info_block-sitelink a:hover {
-  color: #3a404b;
+  color: #3f7a7c;
 }
 
 .info_block-icons {
@@ -946,7 +955,7 @@ h6 {
 }
 
 .info_icon:hover {
-  color: #3A68B8;
+  color: #3f7a7c;
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
@@ -1114,7 +1123,7 @@ body.lock {
     display: block;
     border-style: solid;
     border-width: 10px 8px 0 8px;
-    border-color: #3A68B8 transparent transparent transparent;
+    border-color: #3f7a7c transparent transparent transparent;
     -webkit-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
@@ -1125,13 +1134,13 @@ body.lock {
   }
 
   .footer_input:checked ~ .spoller_title {
-    color: #3a68bb;
+    color: #3f7a7c;
   }
 
   .footer_input:checked ~ .spoller_title::after {
     border-style: solid;
     border-width: 0 8px 10px 8px;
-    border-color: transparent transparent #3a68bb transparent;
+    border-color: transparent transparent #3f7a7c transparent;
   }
 }
 
@@ -1238,7 +1247,7 @@ body.lock {
     -webkit-transform: skew(0deg, -30deg);
         -ms-transform: skew(0deg, -30deg);
             transform: skew(0deg, -30deg);
-    background: #3a68b8;
+    background: #3f7a7c;
   }
 
   .menu_icon.active::after {
@@ -1246,7 +1255,7 @@ body.lock {
     -webkit-transform: skew(0deg, 30deg);
         -ms-transform: skew(0deg, 30deg);
             transform: skew(0deg, 30deg);
-    background: #3a68b8;
+    background: #3f7a7c;
   }
 
   .main {

@@ -31,8 +31,11 @@
         font-size: 22.5455px;
         line-height: 140%;
         padding: 0 0 0 15px;
-        color: rgba(58, 104, 184, 1);
-        ;
+        background: -webkit-linear-gradient(45deg, rgb(63, 122, 124), rgb(217, 239, 240));
+        background: -moz-linear-gradient(45deg, rgb(63, 122, 124), rgb(217, 239, 240));
+        background: linear-gradient(45deg, rgb(63, 122, 124), rgb(217, 239, 240));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     &_login {
@@ -92,7 +95,7 @@
         transition: 0.3s ease-in-out;
     }
     &_link:hover {
-        color: rgba(58, 104, 184, 1);
+        color: #3f7a7c;
     }
 }
 
@@ -201,12 +204,12 @@
     .menu_icon.active::before {
         left: 0;
         transform: skew(0deg, -30deg);
-        background: rgba(58, 104, 184, 1);
+        background: #3f7a7c;
     }
     .menu_icon.active::after {
         right: 0;
         transform: skew(0deg, 30deg);
-        background: rgba(58, 104, 184, 1);
+        background: #3f7a7c;
     }
     
 }
