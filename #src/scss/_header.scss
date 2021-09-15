@@ -42,7 +42,9 @@
     }
 
     &_login-button {
-        background: rgba(58, 104, 184, 1);
+        background: -webkit-linear-gradient(45deg, rgb(9, 14, 47), rgb(63, 122, 124));
+        background: -moz-linear-gradient(45deg, rgb(9, 14, 47), rgb(63, 122, 124));
+        background: linear-gradient(45deg, rgb(9, 14, 47), rgb(63, 122, 124));
         min-height: 52px;
         border-radius: 5px;
         display: flex;
@@ -57,9 +59,10 @@
     }
 
     &_login-button:hover{
-        background: rgba(0,0,0,0);
-        color: #3a7999;
-        box-shadow: inset 0 0 0 3px #3a7999;
+        background: -webkit-linear-gradient(45deg, rgb(50, 57, 109), rgb(30, 223, 229));
+        background: -moz-linear-gradient(45deg, rgb(50, 57, 109), rgb(30, 223, 229));
+        background: linear-gradient(45deg, rgb(50, 57, 109), rgb(30, 223, 229));
+        color: #fff;
         transition: all 0.4s  ease-out 0s;
         transform: scale(1.1);
 }
